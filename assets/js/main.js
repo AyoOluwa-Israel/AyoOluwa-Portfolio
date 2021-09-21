@@ -106,3 +106,54 @@ JS INDEX
 
 }(jQuery));
 
+
+
+
+
+var form = document.getElementById('form')
+form.addEventListener('submit', function(e) {
+	e.preventDefault();
+	var name = document.getElementById("contact-name").value
+	var email = document.getElementById("contact-email").value
+	var phone = document.getElementById("contact-phone").value
+	var message = document.getElementById("contact-message").value
+
+
+	// const options = {
+	// 	method: 'POST',
+	// 	body: JSON.stringify({
+	// 		name: name,
+	// 		email: email,
+	// 		phone: phone,
+	// 		message: message
+	// 	})  
+	// };
+	fetch( 'https://infinidevapi.herokuapp.com/form', {
+		method: 'POST',
+		body: JSON.stringify({
+			name: name,
+			email: email,
+			phone: phone,
+			message: message
+		}), 
+		headers: {
+			"Content-Type": "application/json; charset=UTF-8"
+			}
+	},
+	)
+		.then( response => response.json() )
+		.then( response => {
+				console.log(data)
+		});
+
+
+		form.reset();
+
+
+})
+
+
+//https://infinidevapi.herokuapp.com/form
+
+
+
