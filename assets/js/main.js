@@ -143,7 +143,7 @@ form.addEventListener('submit', function(e) {
 	)
 		.then( response => response.json() )
 		.then( response => {
-				console.log(data)
+				console.log(response.data)
 		});
 
 
