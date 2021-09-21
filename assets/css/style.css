@@ -331,6 +331,15 @@ nav.fixed-top .nav-item .nav-link:before {
   background-position: center center;
 }
 
+.shade {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .banner-caption {
   border-radius: 4px;
   display: table;
