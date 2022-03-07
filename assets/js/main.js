@@ -112,22 +112,14 @@ form.addEventListener('submit', function(e) {
 	var message = document.getElementById("contact-message").value
 
 
-	// const options = {
-	// 	method: 'POST',
-	// 	body: JSON.stringify({
-	// 		name: name,
-	// 		email: email,
-	// 		phone: phone,
-	// 		message: message
-	// 	})  
-	// };
 	fetch( 'https://infinidevapi.herokuapp.com/form', {
 		method: 'POST',
 		body: JSON.stringify({
 			name: name,
 			email: email,
 			phone: phone,
-			message: message
+			business_name: business_name,
+			address: address,
 		}), 
 		headers: {
 			"Content-Type": "application/json; charset=UTF-8"

@@ -306,9 +306,9 @@ nav.fixed-top .nav-item {
   color: #000;
 }
 
-nav.fixed-top .nav-item .nav-link {
+/* nav.fixed-top .nav-item .nav-link {
   color: #000 !important;
-}
+} */
 
 nav.fixed-top .nav-item .nav-link:before {
   background-color: #000;
